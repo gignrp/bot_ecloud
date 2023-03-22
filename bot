@@ -23,41 +23,6 @@ function send_message_bot(message_send){
 setInterval(function () {
 bot_message =  get_message ;
 IiI = bot_message.length -1;
-if (bot_message[IiI]["pseudo"] != "GIGN RP") {
-if (bot_message[IiI]["message"] == "help") {
-bot_message[IiI + 1] = {
-    "message":"fin",
-    "pseudo":"test",
-    "id":IiI + 1
-};
-send_message_bot("bonjour");
-}
-}
-}, 500);function send_message_bot(message_send){
-    fetch("https://ecloudservice.fr/send_message.php", {
-"headers": {
-"accept": "*/*",
-"accept-language": "fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7",
-"content-type": "application/x-www-form-urlencoded",
-"sec-ch-ua": "\"Opera GX\";v=\"95\", \"Chromium\";v=\"109\", \"Not;A=Brand\";v=\"24\"",
-"sec-ch-ua-mobile": "?0",
-"sec-ch-ua-platform": "\"Windows\"",
-"sec-fetch-dest": "empty",
-"sec-fetch-mode": "cors",
-"sec-fetch-site": "same-origin"
-},
-"referrer": "https://ecloudservice.fr/tchat.php",
-"referrerPolicy": "strict-origin-when-cross-origin",
-"body": "message="+message_send+"&id=2",
-"method": "POST",
-"mode": "cors",
-"credentials": "include"
-});
-}
-
-setInterval(function () {
-bot_message =  get_message ;
-IiI = bot_message.length -1;
 if (bot_message[IiI]["pseudo"] != "Votre pseudo") {
 if (bot_message[IiI]["message"] == "Le nom de la commande") {
 bot_message[IiI + 1] = {
